@@ -1,0 +1,29 @@
+ #message {
+
+     position: absolute;
+     top: 45vh;
+     left: 0;
+     right: 0;
+     width: 50%;
+     margin: 0 auto;
+     text-align: center;
+     background-color: #555;
+     font-size: xx-large;
+     color: #fff;
+     padding: 25px;
+     display: none;
+ }
+
+ .question-wrap {
+     display: flex;
+     flex-direction: column;
+     top: auto;
+     width: 50%;
+     justify-content: center;
+     align-items: center;
+     width: auto;
+ }
+
+ h1#clock {
+display: "none";
+ }
