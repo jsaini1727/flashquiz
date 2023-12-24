@@ -100,35 +100,18 @@ function saveScore() {
     var initialInput = document.querySelector("#initial-input");
     var nameValue = initialInput.value;
     var rawData = localStorage.getItem('highscores');
-    var highscores = JSON.parse(rawData) || [];
-
+    console.log('rawDate:', rawData);
+    var highscores = JSON.parse(localStorage.getItem('highscores')) || [];
+    console.log('highscores:', highscores);
     highscores.push({
         initials: nameValue,
         score: time
     })
-    localStorage.setItem('highscores', JSON.stringify(highscores))
+    localStorage.setItem('highscores', JSON.stringify(highscores));
     window.location = './highscores.html';
 }
 
-// This function retrieves the highscores and output a div into the DOm for each highscore object
-var highscoreOutput = document.querySelector('highscores-output');
-function outputHighscores() {
-    var rawData = localStorage.getItem('highscores');
-    var highscores = JSON.parse(rawData);
-    for (var i = 0; i < highscores.length; i++) {
-        var record = document.createElement('div');
-        var h3 = document.createElement('h3');
-        var p = document.createElement('p');
-        var scoreObj = highscores[i];
-        h3.innerText = "Initials: " + scoreObj.initials;
-        p.innerText = "Score: " + scoreObj.score;
-        record.append(h3, p);
-        highscoreOutput.append(record);
-    }
 
-}
-
-outputHighscores()
 
 // Event Listeners
 startQuizButton.addEventListener('click', startQuiz);
