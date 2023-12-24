@@ -8,7 +8,7 @@ This has been the toughest project for me by far in my life. This was largely ow
 
 ## Repository
 ```
-https://jsaini1727.github.io/flashquiz/
+https://github.com/jsaini1727/flashquiz
 
 ```
 
